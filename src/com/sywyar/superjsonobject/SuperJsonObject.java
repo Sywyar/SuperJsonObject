@@ -99,6 +99,14 @@ public class SuperJsonObject {
         return jsonObject.getAsJsonArray(key);
     }
 
+    public float getAsFloat(@NotNull String key) {
+        return jsonObject.getAsJsonPrimitive(key).getAsFloat();
+    }
+
+    public double getAsDouble(@NotNull String key) {
+        return jsonObject.getAsJsonPrimitive(key).getAsDouble();
+    }
+
     public boolean getAsBoolean(@NotNull String key) {
         return jsonObject.get(key).getAsBoolean();
     }
