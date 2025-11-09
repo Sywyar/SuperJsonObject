@@ -228,6 +228,14 @@ public class SuperJsonObject {
         }
     }
 
+    public SuperJsonObject getOrDefault(@NotNull String key, @NotNull SuperJsonObject defaultValue) {
+        if (this.has(key)) {
+            return this.getAsSuperJsonObject(key);
+        } else {
+            return defaultValue;
+        }
+    }
+
     public boolean save() throws IOException {
         if (file == null) {
             return false;
