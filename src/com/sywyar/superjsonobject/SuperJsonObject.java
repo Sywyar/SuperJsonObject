@@ -123,6 +123,10 @@ public class SuperJsonObject {
         return jsonObject.get(key).getAsInt();
     }
 
+    public Long getAsLong(@NotNull String key){
+        return jsonObject.get(key).getAsLong();
+    }
+
     public Number getAsNumber(@NotNull String key) {
         return jsonObject.get(key).getAsNumber();
     }
